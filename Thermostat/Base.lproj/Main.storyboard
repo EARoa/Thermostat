@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="iqV-WJ-Qiq">
+                                <rect key="frame" x="182" y="241" width="236" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="Oy8-cy-oyf"/>
+                                    <constraint firstAttribute="height" constant="30" id="Q4G-ad-L10"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="temperatureController:" destination="BYZ-38-t0r" eventType="valueChanged" id="5fc-bu-tP5"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5my-d1-uni">
+                                <rect key="frame" x="190" y="95" width="221" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="221" id="fMd-Hi-h2t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="43L-5B-DKj">
+                                <rect key="frame" x="183" y="39" width="234" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Vea-Iq-UFf"/>
+                                    <constraint firstAttribute="width" constant="234" id="fot-cr-Vns"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Celsius"/>
+                                    <segment title="Fahrenheit"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="43L-5B-DKj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="0vR-AS-PAG"/>
+                            <constraint firstItem="iqV-WJ-Qiq" firstAttribute="top" secondItem="5my-d1-uni" secondAttribute="bottom" constant="19" id="8sa-Hg-ZlC"/>
+                            <constraint firstItem="43L-5B-DKj" firstAttribute="centerX" secondItem="5my-d1-uni" secondAttribute="centerX" id="IsX-n6-V66"/>
+                            <constraint firstItem="43L-5B-DKj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jt6-Ps-78p"/>
+                            <constraint firstItem="5my-d1-uni" firstAttribute="top" secondItem="43L-5B-DKj" secondAttribute="bottom" constant="28" id="PeR-dP-fgB"/>
+                            <constraint firstItem="5my-d1-uni" firstAttribute="centerX" secondItem="iqV-WJ-Qiq" secondAttribute="centerX" id="hN2-9o-3r9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iqV-WJ-Qiq" secondAttribute="bottom" constant="329" id="hV6-Ih-FIv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="temperatureLabel" destination="5my-d1-uni" id="Whl-w0-XPf"/>
+                        <outlet property="temperatureSlider" destination="iqV-WJ-Qiq" id="9Vf-eu-gRf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="337"/>
+        </scene>
+    </scenes>
+</document>
