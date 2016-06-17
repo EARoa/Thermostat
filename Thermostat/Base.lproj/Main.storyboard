@@ -29,11 +29,12 @@
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5my-d1-uni">
                                 <rect key="frame" x="190" y="95" width="221" height="127"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="221" id="fMd-Hi-h2t"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="43L-5B-DKj">
@@ -46,12 +47,13 @@
                                     <segment title="Celsius"/>
                                     <segment title="Fahrenheit"/>
                                 </segments>
+                                <color key="tintColor" white="0.97999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="temperatureController:" destination="BYZ-38-t0r" eventType="valueChanged" id="srX-Q1-MTx"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.50980392156862742" green="0.5607843137254902" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="43L-5B-DKj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="0vR-AS-PAG"/>
                             <constraint firstItem="iqV-WJ-Qiq" firstAttribute="top" secondItem="5my-d1-uni" secondAttribute="bottom" constant="19" id="8sa-Hg-ZlC"/>

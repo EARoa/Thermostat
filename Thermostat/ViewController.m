@@ -21,6 +21,9 @@
 -(IBAction) temperatureController:(id)sender {
     NSLog(@"%d",(int) self.temperatureSlider.value);
     
+    
+    
+    
     if(_segmentController.selectedSegmentIndex == 0 ){
         float fahrenheit = self.temperatureSlider.value;
         float celsius = (fahrenheit - 32) / 1.8;
@@ -29,12 +32,44 @@
         self.temperatureLabel.text = valueString;
         
         
+//        Color Changes for Celsius
+        
+        if (celsius >= 32){
+//            red
+            self.view.backgroundColor=[UIColor colorWithRed:198/255.0 green:40/255.0 blue:40/255.0 alpha:1.0];
+            
+        } else if(celsius <= -6){
+//            blue
+            self.view.backgroundColor=[UIColor colorWithRed:0/255.0 green:145/255.0 blue:234/255.0 alpha:1.0];
+            
+        }
+        
+        
+        
     } else if (_segmentController.selectedSegmentIndex == 1){
         
         NSString *valueString = [NSString stringWithFormat:@"%d",(int) self.temperatureSlider.value];
             self.temperatureLabel.text = valueString;
+        
+        
+//        Color Changes for Fahrenheit
+        
+        if (self.temperatureSlider.value >= 90){
+//            red
+            self.view.backgroundColor=[UIColor colorWithRed:198/255.0 green:40/255.0 blue:40/255.0 alpha:1.0];
+            
+        } else if( self.temperatureSlider.value <= 20){
+//           blue
+           self.view.backgroundColor=[UIColor colorWithRed:0/255.0 green:145/255.0 blue:234/255.0 alpha:1.0];
+            
+        }
     
     }
+    
+    
+
+    
+    
 }
 
 
