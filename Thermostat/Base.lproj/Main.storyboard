@@ -60,6 +60,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="segmentController" destination="43L-5B-DKj" id="Kb7-JQ-76K"/>
                         <outlet property="temperatureLabel" destination="5my-d1-uni" id="Whl-w0-XPf"/>
                         <outlet property="temperatureSlider" destination="iqV-WJ-Qiq" id="9Vf-eu-gRf"/>
                     </connections>

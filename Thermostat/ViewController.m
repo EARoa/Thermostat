@@ -12,6 +12,7 @@
 
 @property (nonatomic, weak) IBOutlet UISlider *temperatureSlider;
 @property (nonatomic, weak) IBOutlet UILabel *temperatureLabel;
+@property (nonatomic, weak) IBOutlet UISegmentedControl *segmentController;
 
 @end
 
@@ -20,12 +21,27 @@
 -(IBAction) temperatureController:(id)sender {
     NSLog(@"%d",(int) self.temperatureSlider.value);
     
+    
+    
+    if(_segmentController.selectedSegmentIndex == 0 ){
+        
+//      Ok so now we need to do the conversion here and we're done alright!
+        
+        
+        
+    } else if (_segmentController.selectedSegmentIndex == 1){
+        
+        NSString *valueString = [NSString stringWithFormat:@"%d",(int) self.temperatureSlider.value];
+            self.temperatureLabel.text = valueString;
+        
+    
+    }
+    
 
-    NSString *valueString = [NSString stringWithFormat:@"%d",(int) self.temperatureSlider.value];
-    self.temperatureLabel.text = valueString;
-//
-//    
-
+//    NSString *valueString = [NSString stringWithFormat:@"%d",(int) self.temperatureSlider.value];
+//    self.temperatureLabel.text = valueString;
+//  
+    
     
 //    if ([valueString length] == 0) {
 //        NSLog(@"ZERO");
