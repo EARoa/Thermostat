@@ -22,67 +22,23 @@
     NSLog(@"%d",(int) self.temperatureSlider.value);
     
     
-    
     if(_segmentController.selectedSegmentIndex == 0 ){
+        double iNeedThis = self.temperatureSlider.value;
         
-//      Ok so now we need to do the conversion here and we're done alright!
+        double uhhIDK = (iNeedThis - 32) / 1.8;
         
+        NSString *valueString = [NSString stringWithFormat:@"%.2f", uhhIDK];
+        self.temperatureLabel.text = valueString;
         
         
     } else if (_segmentController.selectedSegmentIndex == 1){
         
         NSString *valueString = [NSString stringWithFormat:@"%d",(int) self.temperatureSlider.value];
             self.temperatureLabel.text = valueString;
-        
+//        hmm...
     
     }
-    
-
-//    NSString *valueString = [NSString stringWithFormat:@"%d",(int) self.temperatureSlider.value];
-//    self.temperatureLabel.text = valueString;
-//  
-    
-    
-//    if ([valueString length] == 0) {
-//        NSLog(@"ZERO");
-//    }
-//    else {
-//        NSInteger myCelsius, myFahrenheit;
-//        myCelsius = myInput.text.integerValue;
-//        myFahrenheit = (myCelsius / (5.0/9.0)) + 32;
-//        myLabel.text = [NSString stringWithFormat:@"%d", myFahrenheit];
-//        
-//    }
-
-    
-    
-//    
-//    UISlider *slider = (UISlider *) sender;
-//    
-//    NSString *title = slider.titleLabel.text;
-//    
-//    if([title isEqualToString:@"Add"]) {
-//        
-//        // [_calculator add] // pass in the values
-//        
-//        // do addition
-//    } else if([title isEqualToString:@"Subtract"]) {
-//        // do subtraction
-//    } else if([title isEqualToString:@"Multiply"]) {
-//        // do multiplication
-//    }
-//    
-//    
-//    NSLog(@"%@",slider.titleLabel.text);
-//    
-//    
-    
-    
 }
-
-
-
-
 
 
 - (void)viewDidLoad {
