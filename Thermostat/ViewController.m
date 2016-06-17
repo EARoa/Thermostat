@@ -21,13 +21,11 @@
 -(IBAction) temperatureController:(id)sender {
     NSLog(@"%d",(int) self.temperatureSlider.value);
     
-    
     if(_segmentController.selectedSegmentIndex == 0 ){
-        double iNeedThis = self.temperatureSlider.value;
+        float fahrenheit = self.temperatureSlider.value;
+        float celsius = (fahrenheit - 32) / 1.8;
         
-        double uhhIDK = (iNeedThis - 32) / 1.8;
-        
-        NSString *valueString = [NSString stringWithFormat:@"%.2f", uhhIDK];
+        NSString *valueString = [NSString stringWithFormat:@"%4.2f", celsius];
         self.temperatureLabel.text = valueString;
         
         
@@ -35,10 +33,10 @@
         
         NSString *valueString = [NSString stringWithFormat:@"%d",(int) self.temperatureSlider.value];
             self.temperatureLabel.text = valueString;
-//        hmm...
     
     }
 }
+
 
 
 - (void)viewDidLoad {
